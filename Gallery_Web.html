@@ -21,39 +21,45 @@
 <body>
 
     
-    <section class="menu-section">
+    <section class="Menu-section">
         <h1> Gallery Menu </h1>
         <p> THIS IS SECTION 1</p>
     </section>
 
 
-    <h2> Gallery </h2>
-    <section class="gallery-section">
-    <div class="Gallery_Wrap">
+    <h2> Energy </h2>
+    <p> THIS IS SECTION 2 </p>
+    <section class="Gallery-section">
+    <div class="Gallery_Box">
         <img src="left.png" id="BackBtn">
 
         <div class="Gallery">
             <div>
 
-                <span><img src="recycle.jpg"></span>
-                <span><img src="lightbulb.jpg"></span>
-                <span><img src="windmil_img.jpg"></span>
+                <span><img src="recycle.jpg" onclick="expandImage(this.src)" ></span>
+                <span><img src="lightbulb.jpg" onclick="expandImage(this.src)" ></span>
+                <span><img src="windmil_img.jpg" onclick="expandImage(this.src)"></span>
 
             </div>
 
             <div>
 
-                <span><img src="lightbulb_2.jpg"></span>
-                <span><img src="battery.jpg"></span>
-                <span><img src="windmil_background.png"></span>
+                <span><img src="lightbulb_2.jpg" onclick="expandImage(this.src)"></span>
+                <span><img src="battery.jpg" onclick="expandImage(this.src)"></span>
+                <span><img src="windmil_background.png" onclick="expandImage(this.src)"></span>
 
             </div>
         </div>
 
         <img src="right.png" id="FrwdBtn">
+        
 
     </div>
     </section>
+
+    <div class="expanded_image_box" onclick="close_Image()" >
+        <img src="" class="expand_image" id="expanded_Image" style="width: 550px; height: 550px; position: absolute; top: 15%; left: 35%; ">
+    </div>
 
     <script>
 
@@ -75,11 +81,17 @@
 
     });
 
+    function expandImage(src) {
+            var expandedImage = document.getElementById("expanded_Image");
+            expandedImage.src = src;
+            document.querySelector(".expanded_image_box").style.display = "block";
+        }
+
+        function close_Image() {
+            document.querySelector(".expanded_image_box").style.display = "none";
+        }
+
        
-
-
-
-
 
 
     </script>

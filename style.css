@@ -10,40 +10,25 @@ body{
    
 }
 
-.menu-section {
+.Menu-section {
     position: relative;
-    height: 700px; 
-    display: flex;
+    color: #ffffff;
+    height: 810px; 
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #333;
-    color: white; 
-}
-
-.gallery-section {
-    height: 900px; 
-}
-
-
-
-.background_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-image: url("windmil_background.png");
-    background-color: #ffffff;
-    background-size: cover;
     background-repeat: no-repeat;
-    z-index: 1;
+    background-size: cover;
+
+
     
-    filter: blur(10px);
-
- 
-
 }
 
-.background_img::before{
+
+
+.Menu-section::before{
     content: "";
     position:absolute;
     top:0;
@@ -51,6 +36,14 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.3);
+
+ 
+
+}
+
+.Gallery-section {
+    height: 900px; 
+    color: #ffffff;
 }
 
 
@@ -64,34 +57,32 @@ h1 {
     z-index: 1;
     position: absolute;
     top: 25%;
-    left: 40px;
+    left: 470px;
     z-index: 2;
 }
 
 h2 {
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     font-family: "poppins","sans-serif";
-    font-size: 55px;
-    text-shadow: 2px 2px rgb(69, 75, 96);
+    font-size: 65px;
+    text-shadow: 2px 2px rgba(4, 151, 53, 0.478);
     position: absolute;
     z-index: 2;
-    margin: 250px;
-    left: 410px;
+    top: 105%;
+    margin: 0;
+    padding: 0;
+    left: 630px;;
+  
 }
 
 
-
-
-
-.Gallery_Wrap{
+.Gallery_Box{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 400px auto;
+    margin: 200px auto;
 }
-
-
 
 
 
@@ -105,7 +96,7 @@ h2 {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto ; 
-    grid-gap:20px;
+    grid-gap:10px;
     padding: 10px;
     flex:none;
 
@@ -113,9 +104,15 @@ h2 {
 }
 
 .Gallery div img{
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
+    border-radius: 10%;
 
+}
+
+.Gallery div img:hover{
+    box-shadow: 0 0 20px rgb(255, 160, 27);
+    z-index: 3;
 }
 
 
@@ -131,3 +128,16 @@ h2 {
     cursor: pointer;
     margin: 40px;
 }
+
+.expanded_image_box{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    text-align: center;
+}
+
