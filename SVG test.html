@@ -13,12 +13,40 @@
 
 
     <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #0000001e;
+            font-family: poppins, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+          
+
+        }
+
+        .topnav a.active {
+            background-color: rgba(168, 207, 224, 0.488);
+            color: rgb(255, 255, 255);
+
+        }
+
+        .topnav a {
+            float: left;
+            text-align: center;
+            padding: 25px 26px;
+            text-decoration: none;
+            font-size: 18px;
+            
+            color: rgb(4, 97, 151);
+        }
+
+
         h1 {
             position: relative;
-            display: flex;
             justify-content: center;
             top: 30px;
             font-size: 60px;
+            left: 620px;
             font-family: "poppins", "sans-serif";
             color: white;
             z-index: 1;
@@ -26,7 +54,7 @@
 
         svg {
             position: relative;
-            top: 320px;
+            top: 325px;
             left: 220px;
             margin: 10px;
             display: inline-block;
@@ -38,40 +66,54 @@
 
         }
 
-        /**svg:hover{
-            box-shadow: 0 0 20px rgb(255, 255, 255);
-            z-index: 1;
-        }**/
+        a {
+            display: block;
+        }
+
 
 
         .Home_svg {
             position: absolute;
-            top: 200px;
+            top: 285px;
             z-index: 1;
 
 
         }
 
         .bg {
-            background-color: rgba(0, 0, 0, 0.915);
+            background-color: rgba(0, 0, 0, 0.87);
         }
     </style>
+
+
+    <div class="topnav">
+        <a class="Home" href="">Home</a>
+        <a class="Gallery" href=""> Gallery</a>
+        <a class="Shop" href="">Shop</a>
+        <a class="active" href="">Sitemap</a>
+        <a class="Team" href="">Team</a>
+    </div>
 
 
 </head>
 
 <body class="bg">
 
-    <h1>SVG</h1>
+    <h1>SiteMap</h1>
+
+    <a href="" target="blank">
+        <svg width="1050" height="400" class="Home_svg">
+            <defs>
+                <filter id="shadow">
+                    <feDropShadow dx="-8" dy="10" stdDeviation="1" flood-color="white" />
+                </filter>
+            </defs>
 
 
 
-    <svg width="1050" height="400" class="Home_svg">
-
-        <a href="" target="blank">
             <rect width="200" height="150" x="10" y="10" rx="20" ry="20"
-                style="fill:rgb(0, 0, 0); stroke:rgb(255, 255, 255); stroke-width:4"></rect>
-            <text x="110" y="90" font-size="25" font-family="poppins" ,"sans-serif" text-anchor="middle" fill="white">
+                style="fill:rgb(0, 0, 0); stroke:rgb(255, 255, 255); stroke-width:4; filter:url(#shadow);"></rect>
+            <text x="110" y="90" font-size="25" font-family="poppins, sans-serif" text-anchor="middle" fill="white">
                 Home Page </text>
 
             <line x1="120" y1="160" x2="120" y2="230" style="stroke:rgb(255, 255, 255);stroke-width:4"></line>
@@ -83,21 +125,23 @@
 
 
 
-        </a>
-    </svg>
-    </div>
+
+        </svg>
+    </a>
+
 
     <svg width="250" height="300">
         <defs>
-            <filter id="shadow">
+            <filter id="Energy_shadow">
                 <feDropShadow dx="-8" dy="10" stdDeviation="1" flood-color="rgb(255,183,0,0.5)" />
             </filter>
         </defs>
 
         <a href="https://w1896169.users.ecs.westminster.ac.uk/MechelleWeb/Web_Project/Gallery_Web.html" target="blank">
             <rect width="200" height="150" x="10" y="40" rx="20" ry="20"
-                style="fill:rgb(36, 15, 1); stroke:rgb(255, 183, 0); stroke-width:4; filter:url(#shadow);"></rect>
-            <text x="110" y="120" font-size="25" font-family="poppins" ,"sans-serif" text-anchor="middle" fill="white">
+                style="fill:rgb(36, 15, 1); stroke:rgb(255, 183, 0); stroke-width:4; filter:url(#Energy_shadow);">
+            </rect>
+            <text x="110" y="120" font-size="25" font-family="poppins, sans-serif" text-anchor="middle" fill="white">
                 Energy Gallery </text>
 
 
@@ -110,11 +154,16 @@
 
 
     <svg width="250" height="300">
+        <defs>
+            <filter id="shop_shadow">
+                <feDropShadow dx="-8" dy="10" stdDeviation="1" flood-color="rgb(0,255,136,0.5)" />
+            </filter>
+        </defs>
 
         <a href="" target="blank">
             <rect x="10" y="40" width="200" height="150" rx="20" ry="20"
-                style="fill:rgb(1, 22, 9); stroke:rgb(0, 255, 136); stroke-width:4"></rect>
-            <text x="109" y="120" font-size="25" font-family="poppins" ,"sans-serif" text-anchor="middle" fill="white">
+                style="fill:rgb(1, 22, 9); stroke:rgb(0, 255, 136); stroke-width:4; filter:url(#shop_shadow);"></rect>
+            <text x="109" y="120" font-size="25" font-family="poppins, sans-serif" text-anchor="middle" fill="white">
                 Shop </text>
 
 
@@ -124,11 +173,17 @@
     </svg>
 
     <svg width="250" height="300">
+        <defs>
+            <filter id="Sitemap_shadow">
+                <feDropShadow dx="-8" dy="10" stdDeviation="1" flood-color="rgb(251,0,255,0.5)" />
+            </filter>
+        </defs>
 
         <a href="" target="blank">
             <rect width="200" height="150" x="10" y="40" rx="20" ry="20"
-                style="fill:rgb(38, 1, 29); stroke:rgb(251, 0, 255); stroke-width:4"></rect>
-            <text x="108" y="121" font-size="25" font-family="poppins" ,"sans-serif" text-anchor="middle" fill="white">
+                style="fill:rgb(38, 1, 29); stroke:rgb(251, 0, 255); stroke-width:4; filter:url(#Sitemap_shadow);">
+            </rect>
+            <text x="108" y="121" font-size="25" font-family="poppins, sans-serif" text-anchor="middle" fill="white">
                 Sitemap </text>
 
 
@@ -137,11 +192,16 @@
     </svg>
 
     <svg width="250" height="300">
+        <defs>
+            <filter id="Team_shadow">
+                <feDropShadow dx="-8" dy="10" stdDeviation="1" flood-color="rgb(26,34,187,0.8)" />
+            </filter>
+        </defs>
 
         <a href="" target="blank">
             <rect width="200" height="150" x="10" y="40" rx="20" ry="20"
-                style="fill:rgba(15, 4, 45, 0.597); stroke:rgb(26, 34, 187); stroke-width:4"></rect>
-            <text x="110" y="120" font-size="25" font-family:"poppins","sans-serif" text-anchor="middle" fill="white">
+                style="fill:rgb(13, 1, 47); stroke:rgb(26, 34, 187); stroke-width:4; filter:url(#Team_shadow);"></rect>
+            <text x="110" y="120" font-size="25" font-family="poppins, sans-serif" text-anchor="middle" fill="white">
                 Team </text>
 
 
