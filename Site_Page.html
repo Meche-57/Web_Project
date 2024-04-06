@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MY-SitePage</title>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: poppins, sans-serif;
+        }
+
+        .bg {
+            background-color: beige;
+        }
+
+        .header {
+            padding: 40px;
+            text-align: center;
+            background: #afafb7;
+            color: rgb(0, 0, 0);
+        }
+
+        .header h1 {
+            font-size: 40px;
+            
+        }
+
+        .personal_navbar {
+            overflow: hidden;
+           
+            background: #bdbdc5;
+         
+
+
+
+        }
+
+
+        .personal_navbar a {
+
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            margin-left: 668px;
+        }
+
+
+        .personal_navbar a:hover {
+            background-color: #f0c68b;
+            color: black;
+            width: 150px;
+
+        }
+
+
+
+
+
+        .navbar {
+            overflow: hidden;
+             background-color: #b953061e;
+            width: 700px;
+            margin-bottom: 20px;
+        }
+
+
+        .navbar a {
+
+            display: inline-block;
+            color: rgb(91, 91, 91);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+
+        .navbar a:hover {
+            background-color: #f3e0b5;
+            color: black;
+            width: 675px;
+            margin: 0;
+        }
+
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+
+        .main {
+            background-color: rgba(248, 118, 53, 0.358);
+
+
+            text-align: center;
+            max-width: 700px;
+
+
+
+
+        }
+
+
+        .img {
+          
+            width: 100%;
+            padding: 20px;
+            margin-left: 235px;
+            align-items: center;
+            background-image: url(5857.jpg);
+            background-size: cover;
+            border-radius: 5px;
+            cursor: pointer; 
+
+        }
+
+        .img.flip {
+            
+            animation: flipImg 1s 2 alternate;
+        }
+
+
+
+
+        .main p {
+            max-width: 400px;
+            margin-bottom: 25px;
+            max-width: 500px;
+            margin-left: 110px;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        
+        @keyframes flipImg {
+            0% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(-1);
+            }}
+
+    </style>
+</head>
+
+<body class="bg">
+
+    <div class="header">
+        <h1> Site Page </h1>
+        <p> Webpage created by @Mechelle.</p>
+    </div>
+
+
+    <div class="personal_navbar">
+        <a href="#">Link to My Github</a>
+       
+    </div>
+
+
+    <div class="row">
+        <div class="main">
+            <h2> About Me</h2>
+            <div class="img" style="height:200px; width:200px;"onclick="toggleFlip()"> </div>
+            <p> Mechelle Cobos </p>
+            <p> First Year Computer Science student </p>
+            <h3>My work: </h3>
+
+
+
+            <div class="navbar">
+                <a href="#">My Content Page</a>
+            </div>
+
+            <p>In my content page I have written about how
+                reusable energy can help us improve our future .</p>
+
+            <div class="navbar">
+                <a href="#">Sitemap</a>
+            </div>
+
+            <p>Created a Sitemap where is linked to the pages of our website.</p>
+
+            <div class="navbar">
+                <a href="#">Links to Gallery </a>
+            </div>
+
+            <p>Link to our Gallery where there are interactive images.</p>
+
+
+          
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+
+        function toggleFlip() {
+            var img = document.querySelector('.img');
+            img.classList.toggle('flip'); 
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
