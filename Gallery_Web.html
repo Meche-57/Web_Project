@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 
-<html lan="en">
+<html lang="en">
+
+
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,51 +19,72 @@
 
     <title> Gallery Site </title>
     <link rel="stylesheet" href="style.css">
+
+
+
 </head>
 
 
 <body>
 
-    
-    <section class="Menu-section">
-        <h1> Gallery Menu </h1>
-        <p> THIS IS SECTION 1</p>
+    <div class="topnav">
+
+        <a class="Home" href="">Home</a>
+        <a class="active" href=""> Gallery</a>
+        <a class="Shop" href="">Shop</a>
+        <a class="Sitemap" href="">Sitemap</a>
+        <a class="Content Page" href=""> Content Page </a>
+        <a class="Team" href="">Team</a>
+    </div>
+
+    <section>
+
+        <h1> Energy Gallery </h1>
+
+        <div class="header"> </div>
+
     </section>
 
-
-    <h2> Energy </h2>
-    <p> THIS IS SECTION 2 </p>
-    <section class="Gallery-section">
-    <div class="Gallery_Box">
-        <img src="left.png" id="BackBtn">
+    <section>
+        <h2> Image Gallery </h2>
 
         <div class="Gallery">
+
             <div>
 
-                <span><img src="recycle.jpg" onclick="expandImage(this.src)" ></span>
-                <span><img src="lightbulb.jpg" onclick="expandImage(this.src)" ></span>
-                <span><img src="windmil_img.jpg" onclick="expandImage(this.src)"></span>
+                <span><img src="recycle.jpg" alt="recycle" onclick="expandImage(this.src)"></span>
+                <span><img src="lightbulb.jpg" alt="lightbulb" onclick="expandImage(this.src)"></span>
+                <span><img src="windmil_img.jpg" alt="windmil" onclick="expandImage(this.src)"></span>
 
             </div>
 
             <div>
 
-                <span><img src="lightbulb_2.jpg" onclick="expandImage(this.src)"></span>
-                <span><img src="battery.jpg" onclick="expandImage(this.src)"></span>
-                <span><img src="windmil_background.png" onclick="expandImage(this.src)"></span>
+                <span><img src="lightbulb_2.jpg" alt="lightbulb" onclick="expandImage(this.src)"></span>
+                <span><img src="battery.jpg" alt="battery" onclick="expandImage(this.src)"></span>
+                <span><img src="windmil_background.png" alt="windmil" onclick="expandImage(this.src)"></span>
 
             </div>
+
+
         </div>
+        <img src="left.png" alt="left button" id="BackBtn">
 
-        <img src="right.png" id="FrwdBtn">
-        
 
-    </div>
+        <img src="right.png" alt="right button" id="FrwdBtn">
+
+
+
+
     </section>
 
-    <div class="expanded_image_box" onclick="close_Image()" >
-        <img src="" class="expand_image" id="expanded_Image" style="width: 550px; height: 550px; position: absolute; top: 15%; left: 35%; ">
+    <div class="expanded_image_box" onclick="close_Image()">
+        <img src="all_img" alt="picture" class="expand_image" id="expanded_Image"
+            style="width: 550px; height: 550px; position: absolute; top: 15%; left: 35%; ">
+        <p> This Picture is an Example on how we can use Clean Energy </p>
     </div>
+
+
 
     <script>
 
@@ -67,21 +92,21 @@
         let BackBtn = document.getElementById("BackBtn");
         let FrwdBtn = document.getElementById("FrwdBtn");
 
-        
-        FrwdBtn.addEventListener("click",()=>{
-        scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft +=900;
 
-    });
+        FrwdBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
 
-            
-    BackBtn.addEventListener("click",()=>{
-        scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft -=900;
+        });
 
-    });
 
-    function expandImage(src) {
+        BackBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 900;
+
+        });
+
+        function expandImage(src) {
             var expandedImage = document.getElementById("expanded_Image");
             expandedImage.src = src;
             document.querySelector(".expanded_image_box").style.display = "block";
@@ -91,40 +116,16 @@
             document.querySelector(".expanded_image_box").style.display = "none";
         }
 
-       
+
 
 
     </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="footer">
+        <p> Created by @Mechelle</p>
+    </div>
 
 
 </body>
-
-
-
-
 
 </html>
